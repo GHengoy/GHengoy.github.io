@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ghengoy.github.io/multi-cat-tracker/sitemap.xml
-Sitemap: https://ghengoy.github.io/podcast-producer-tracker/sitemap.xml
-Sitemap: https://ghengoy.github.io/gaeilge-tracker/sitemap.xml
+Sitemap: https://ghengoy.github.io/multi-cat-tracker/sitemap-posts.xml
+Sitemap: https://ghengoy.github.io/podcast-producer-tracker/sitemap-posts.xml
+Sitemap: https://ghengoy.github.io/gaeilge-tracker/sitemap-posts.xml
