@@ -1,55 +1,184 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7383810158576704" crossorigin="anonymous"></script>
-    <meta name="naver-site-verification" content="d699b35fc55669cb4a94656d4dd1081e2bc71612" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7383810158576704" crossorigin="anonymous"></script>
+<meta name="naver-site-verification" content="d699b35fc55669cb4a94656d4dd1081e2bc71612" />
 <meta charset="utf-8">
-<title>Simple Trackers</title>
+<title>SimpleTrackers: Practical Guides for Cats, Podcasting and Learning Irish</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Simple, practical tracking spreadsheets and guides for everyday routines — cat health, podcast production, and Irish language study.">
+<meta name="description" content="Practical guides and simple tracking routines for multi-cat households, podcast production and self-taught Irish learners.">
 <link rel="canonical" href="https://ghengoy.github.io/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Simple Trackers">
-<meta property="og:description" content="Simple, practical tracking spreadsheets and guides for everyday routines — cat health, podcast production, and Irish language study.">
+<meta property="og:title" content="SimpleTrackers: Practical Guides for Cats, Podcasting and Learning Irish">
+<meta property="og:description" content="Practical guides and simple tracking routines for multi-cat households, podcast production and self-taught Irish learners.">
 <meta property="og:url" content="https://ghengoy.github.io/">
 <meta name="p:domain_verify" content="ed2ca7fb71cecfffeba5d895002ee1d1"/>
 <script data-goatcounter="https://ghengoy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
-  body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #222; }
-  a { color: #0a5; }
-  header, footer { font-size: 0.9rem; color: #666; }
-  footer a { margin-right: 1rem; }
-  .site { border: 1px solid #ddd; border-radius: 8px; padding: 1.2rem 1.5rem; margin: 1.2rem 0; }
-  .site h2 { margin: 0 0 0.4rem; font-size: 1.2rem; }
-  .site p { margin: 0; }
+  :root { --accent: #2B4C7E; --accent-dark: #1B3358; --tint: #EAF0F7; --ink: #1f2328; --muted: #5d6470;
+          --line: #e4e1da; --paper: #fbfaf7; --card: #ffffff; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+         font-size: 18px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: var(--accent-dark); }
+  img { max-width: 100%; height: auto; }
+  .site-header { background: var(--card); border-bottom: 1px solid var(--line); }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .brand { font-weight: 700; color: var(--ink); text-decoration: none; font-size: 17px; display: flex; align-items: center; gap: 10px; }
+  .brand-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--accent); display: inline-block; position: relative; }
+  .brand-mark::after { content: ""; position: absolute; left: 7px; top: 8px; width: 14px; height: 3px; background: #fff; border-radius: 2px;
+                       box-shadow: 0 5px 0 #fff, 0 10px 0 rgba(255,255,255,.6); }
+  .site-header nav { display: flex; gap: 18px; font-size: 15px; }
+  .site-header nav a { color: var(--muted); text-decoration: none; }
+  .site-header nav a:hover { color: var(--accent); }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 56px; }
+  article > h1, main > h1 { font-size: clamp(30px, 5vw, 42px); line-height: 1.2; letter-spacing: -0.02em; margin: 8px 0 12px; }
+  h2 { font-size: 27px; line-height: 1.3; letter-spacing: -0.01em; margin: 52px 0 14px; padding-top: 6px; scroll-margin-top: 16px; }
+  h3 { font-size: 21px; line-height: 1.35; margin: 32px 0 8px; }
+  p { margin: 0 0 20px; }
+  ul, ol { padding-left: 1.3em; margin: 0 0 22px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--accent); }
+  strong { font-weight: 650; }
+  .pillar-link { font-size: 15px; margin: 0 0 4px; }
+  .pillar-link a { text-decoration: none; }
+  .post-meta { color: var(--muted); font-size: 15px; margin: 0 0 24px; }
+  .post-hero { margin: 0 0 28px; }
+  .post-hero img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; display: block; background: var(--tint); }
+  figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+  figcaption a { color: var(--muted); }
+  .toc { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px 8px; margin: 0 0 32px; font-size: 16px; }
+  .toc-title { font-weight: 700; margin: 0 0 8px; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .toc ol { margin: 0 0 10px; }
+  .toc li { margin-bottom: 4px; }
+  .toc a { text-decoration: none; }
+  .key-takeaways, .callout { border-radius: 12px; padding: 20px 24px 6px; margin: 0 0 30px; }
+  .key-takeaways { background: var(--tint); border-left: 5px solid var(--accent); }
+  .key-takeaways ul { margin-bottom: 14px; }
+  .box-title { font-weight: 700; margin: 0 0 8px; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-dark); }
+  .callout { background: var(--card); border: 1px solid var(--line); border-left: 5px solid var(--accent); }
+  .callout.note { border-left-color: #b7791f; }
+  .callout.note .box-title { color: #8a5a12; }
+  .steps { list-style: none; counter-reset: step; padding-left: 0; }
+  .steps > li { counter-increment: step; position: relative; padding-left: 52px; margin-bottom: 18px; }
+  .steps > li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%;
+                        background: var(--accent); color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+  .table-wrap { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); }
+  table { border-collapse: collapse; width: 100%; font-size: 16px; line-height: 1.5; }
+  th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--tint); color: var(--accent-dark); font-weight: 700; }
+  tr:last-child td { border-bottom: 0; }
+  .pin-figure { margin: 36px auto; max-width: 400px; text-align: center; }
+  .pin-figure img { border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,.12); display: block; }
+  blockquote { margin: 0 0 24px; padding: 4px 0 4px 20px; border-left: 3px solid var(--line); color: var(--muted); font-style: italic; }
+  .post-cta { display: flex; gap: 24px; align-items: center; background: var(--card); border: 1px solid var(--line); border-top: 5px solid var(--accent);
+              border-radius: 14px; padding: 24px; margin: 48px 0 8px; }
+  .post-cta img { width: 150px; border-radius: 10px; flex-shrink: 0; }
+  .post-cta h3 { margin: 2px 0 6px; }
+  .post-cta p { margin-bottom: 12px; font-size: 16px; }
+  .cta-kicker { font-size: 13px !important; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 !important; }
+  .buy-button { display: inline-block; background: var(--accent); color: #fff !important; padding: 12px 22px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; }
+  .buy-button:hover { background: var(--accent-dark); }
+  .product-box { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin: 24px 0 36px; display: grid; grid-template-columns: 200px 1fr; gap: 0 24px; align-items: center; }
+  .product-box img { width: 200px; border-radius: 10px; grid-row: span 3; }
+  .product-box h3 { margin: 0 0 6px; }
+  .product-box p { margin-bottom: 12px; font-size: 16px; }
+  .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin: 12px 0 36px; }
+  .product-card { display: flex; flex-direction: column; gap: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px; color: var(--ink); text-decoration: none; font-size: 15px; line-height: 1.4; }
+  .product-card:hover { border-color: var(--accent); }
+  .product-card img { width: 100%; border-radius: 8px; margin-bottom: 4px; }
+  .product-card span { color: var(--muted); }
+  .product-card .price { color: var(--accent); font-weight: 700; }
+  .post-list { list-style: none; padding: 0; display: grid; gap: 16px; }
+  .post-list li { margin: 0; }
+  .post-card { display: flex; gap: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; color: var(--ink); text-decoration: none; }
+  .post-card:hover { border-color: var(--accent); }
+  .post-card img { width: 200px; object-fit: cover; flex-shrink: 0; background: var(--tint); }
+  .post-card-text { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px 16px 0; }
+  .post-card-text strong { font-size: 19px; line-height: 1.35; }
+  .post-card-desc { color: var(--muted); font-size: 15px; line-height: 1.55; }
+  .post-card-date { color: var(--muted); font-size: 13px; }
+  .site-footer { border-top: 1px solid var(--line); background: var(--card); color: var(--muted); font-size: 15px; }
+  .site-footer .inner { max-width: 760px; margin: 0 auto; padding: 28px 20px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .site-footer p { margin: 0; }
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    h2 { font-size: 23px; margin-top: 40px; }
+    .post-cta, .post-card { flex-direction: column; }
+    .post-cta img { width: 120px; }
+    .post-card img { width: 100%; aspect-ratio: 16 / 9; }
+    .post-card-text { padding: 0 16px 16px; }
+    .product-box { grid-template-columns: 1fr; }
+    .product-box img { grid-row: auto; margin-bottom: 12px; }
+  }
+</style>
+<style>
+  .topic { margin: 48px 0 0; }
+  .topic h2 { margin-top: 0; }
+  .topic-links { font-size: 16px; margin: -8px 0 18px; }
+  .topic-links a { margin-right: 18px; }
+  .lead { font-size: 20px; color: var(--muted); }
 </style>
 </head>
 <body>
-<header><nav><a href="index.html">Home</a></nav></header>
-<h1>Simple Trackers</h1>
-<p>Simple, practical tracking spreadsheets and printable guides for everyday routines. Each site below covers one topic in depth, with free articles and a ready-to-use digital tracker.</p>
+<header class="site-header"><div class="inner">
+<a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>SimpleTrackers</a>
+<nav><a href="/">Home</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
+</div></header>
+<main>
+<article>
+<h1>SimpleTrackers</h1>
+<p class="lead">Plain-English guides and simple tracking routines for three everyday projects: caring for several cats, producing a podcast, and teaching yourself Irish.</p>
+<p>Each topic has its own site with in-depth, practical articles. The guides answer the questions people actually search for, such as how many litter boxes multiple cats need, how often to publish a podcast, or how long it takes to learn Irish, and show how a few minutes of record-keeping makes the answer clearer. There are currently 34 guides, and new ones are added regularly.</p>
+<section class="topic">
+<h2>Multi-Cat Health</h2>
+<p>Practical guides for homes with two or more cats: litter box setup, daily health checks, weigh-ins, and how to turn everyday observations into notes your vet can actually use.</p>
+<p class="topic-links"><a href="/multi-cat-tracker/pillar-guide.html">Start with the complete guide &rarr;</a><a href="/multi-cat-tracker/">All 11 guides</a></p>
+<ul class="post-list">
+<li><a class="post-card" href="/multi-cat-tracker/how-often-to-weigh-cats-multi-cat-household.html"><img src="/multi-cat-tracker/images/hero/how-often-to-weigh-cats-multi-cat-household.jpg" alt="" loading="lazy"><span class="post-card-text"><strong>How Often Should You Weigh Each Cat in a Multi-Cat Household?</strong><span class="post-card-desc">How often should you weigh each cat in a multi-cat home? A practical weighing schedule, what counts as a meaningful change, and how to log it per cat.</span></span></a></li>
+<li><a class="post-card" href="/multi-cat-tracker/how-many-litter-boxes-for-multiple-cats.html"><img src="/multi-cat-tracker/images/hero/how-many-litter-boxes-for-multiple-cats.jpg" alt="" loading="lazy"><span class="post-card-text"><strong>How Many Litter Boxes Do You Need for Multiple Cats?</strong><span class="post-card-desc">How many litter boxes do multiple cats need? The one-per-cat-plus-one rule explained, with placement tips and signs your setup isn&#x27;t working.</span></span></a></li>
+<li><a class="post-card" href="/multi-cat-tracker/multi-cat-household-essentials.html"><img src="/multi-cat-tracker/images/hero/multi-cat-household-essentials.jpg" alt="" loading="lazy"><span class="post-card-text"><strong>Multi-Cat Household Essentials: Products That Actually Help</strong><span class="post-card-desc">Products that genuinely help multi-cat homes run smoothly, from litter setups to feeding and enrichment, chosen to reduce stress for every cat.</span></span></a></li>
+<li><a class="post-card" href="/multi-cat-tracker/pillar-guide.html"><img src="/multi-cat-tracker/images/hero/pillar-guide.jpg" alt="" loading="lazy"><span class="post-card-text"><strong>The Complete Guide to Multi-Cat Household Health Tracking</strong><span class="post-card-desc">The complete guide to tracking health in a multi-cat household: what to log for each cat, how to spot changes early, and how to share data with your vet.</span></span></a></li>
+</ul>
+</section>
+<section class="topic">
+<h2>Podcast Production</h2>
+<p>Workflows for independent podcasters: episode checklists, guest coordination, release schedules, and keeping sponsor and affiliate details organised from recording to publish.</p>
+<p class="topic-links"><a href="/podcast-producer-tracker/pillar-guide.html">Start with the complete guide &rarr;</a><a href="/podcast-producer-tracker/">All 11 guides</a></p>
+<ul class="post-list">
+<li><a class="post-card" href="/podcast-producer-tracker/how-often-should-you-publish-a-podcast.html"><img src="/podcast-producer-tracker/images/hero/how-often-should-you-publish-a-podcast.jpg" alt="" loading="lazy"><span class="post-card-text"><strong>How Often Should You Publish a Podcast? Finding a Sustainable Release Schedule</strong><span class="post-card-desc">Weekly, biweekly, or monthly? A practical framework for choosing a podcast release schedule you can actually sustain long-term.</span></span></a></li>
+<li><a class="post-card" href="/podcast-producer-tracker/podcast-episode-checklist.html"><img src="/podcast-producer-tracker/images/hero/podcast-episode-checklist.jpg" alt="" loading="lazy"><span class="post-card-text"><strong>The Complete Podcast Episode Checklist: Idea to Publish</strong><span class="post-card-desc">A complete podcast episode checklist from idea to publish, covering pre-production, recording, editing, publishing, and post-release follow-up.</span></span></a></li>
+<li><a class="post-card" href="/podcast-producer-tracker/podcast-production-essentials.html"><img src="/podcast-producer-tracker/images/hero/podcast-production-essentials.jpg" alt="" loading="lazy"><span class="post-card-text"><strong>Podcast Production Essentials: Tools That Keep Your Operation Organized</strong><span class="post-card-desc">Tools and workspace essentials that keep a podcast operation organized, from planning and scheduling to managing episodes and sponsors.</span></span></a></li>
+<li><a class="post-card" href="/podcast-producer-tracker/pillar-guide.html"><img src="/podcast-producer-tracker/images/hero/pillar-guide.jpg" alt="" loading="lazy"><span class="post-card-text"><strong>The Complete Guide to Podcast Episode &amp; Production Management</strong><span class="post-card-desc">The complete guide to podcast episode and production management: planning, guest scheduling, recording, editing, publishing, and sponsor tracking.</span></span></a></li>
+</ul>
+</section>
+<section class="topic">
+<h2>Irish Self-Study</h2>
+<p>Help for self-taught learners of Irish (Gaeilge): realistic study routines, balancing the four skills, vocabulary goals, TEG exam preparation, and getting back on track after a break.</p>
+<p class="topic-links"><a href="/gaeilge-tracker/pillar-guide.html">Start with the complete guide &rarr;</a><a href="/gaeilge-tracker/">All 12 guides</a></p>
+<ul class="post-list">
+<li><a class="post-card" href="/gaeilge-tracker/how-many-words-for-a-basic-irish-conversation.html"><img src="/gaeilge-tracker/images/hero/how-many-words-for-a-basic-irish-conversation.jpg" alt="" loading="lazy"><span class="post-card-text"><strong>How Many Words Do You Need for a Basic Conversation in Irish?</strong><span class="post-card-desc">How many Irish words do you actually need for a basic conversation? Realistic vocabulary targets by goal, and how to track what sticks.</span></span></a></li>
+<li><a class="post-card" href="/gaeilge-tracker/restarting-irish-study-after-a-break.html"><img src="/gaeilge-tracker/images/hero/restarting-irish-study-after-a-break.jpg" alt="" loading="lazy"><span class="post-card-text"><strong>Restarting Irish Study After a Break: How to Get Back on Track</strong><span class="post-card-desc">Stopped studying Irish for weeks or months? Here&#x27;s how to restart without starting over, and how tracking helps you see what you actually kept.</span></span></a></li>
+<li><a class="post-card" href="/gaeilge-tracker/how-long-does-it-take-to-learn-irish.html"><img src="/gaeilge-tracker/images/hero/how-long-does-it-take-to-learn-irish.jpg" alt="" loading="lazy"><span class="post-card-text"><strong>How Long Does It Take to Learn Irish?</strong><span class="post-card-desc">How long does it take to learn Irish? Realistic time estimates by goal, from basic conversation to fluency, and the factors that change them.</span></span></a></li>
+<li><a class="post-card" href="/gaeilge-tracker/irish-study-tools-essentials.html"><img src="/gaeilge-tracker/images/hero/irish-study-tools-essentials.jpg" alt="" loading="lazy"><span class="post-card-text"><strong>Irish Study Tools Essentials: Materials That Support Real Progress</strong><span class="post-card-desc">Irish study tools that support real progress: dictionaries, grammar books, flashcards, and learning materials for self-taught learners.</span></span></a></li>
+</ul>
+</section>
+<section class="topic">
+<h2>How these guides are written</h2>
+<ul>
+<li><strong>Practical first.</strong> Every guide starts by answering its question directly, then explains the reasoning.</li>
+<li><strong>No medical or professional claims.</strong> The cat guides help you observe and record; decisions about your cats' health belong with your veterinarian.</li>
+<li><strong>Kept up to date.</strong> Guides are revised when we find a clearer way to explain something or a reader points out a problem.</li>
+</ul>
+<p>Read more <a href="/about.html">about SimpleTrackers</a> or <a href="/contact.html">get in touch</a>.</p>
+</section>
 
-<div class="site">
-  <h2><a href="https://ghengoy.github.io/multi-cat-tracker/">Multi-Cat Household Tracker</a></h2>
-  <p>Daily health and litter tracking for multi-cat homes — spot each cat's patterns and bring real data to your vet.</p>
-</div>
-
-<div class="site">
-  <h2><a href="https://ghengoy.github.io/podcast-producer-tracker/">Podcast Producer Tracker</a></h2>
-  <p>Episode management for podcasters — guests, recording, editing, sponsors, and promotion in one place.</p>
-</div>
-
-<div class="site">
-  <h2><a href="https://ghengoy.github.io/gaeilge-tracker/">Irish Study Tracker</a></h2>
-  <p>Progress tracking for Irish Gaelic learners — study hours, vocabulary, the four skills, and TEG exam prep.</p>
-</div>
-
-<footer>
-  <p>
-    <a href="https://ghengoy.github.io/multi-cat-tracker/terms.html">Terms &amp; Conditions</a>
-    <a href="https://ghengoy.github.io/multi-cat-tracker/privacy.html">Privacy Notice</a>
-  </p>
-  <p>&copy; 2026</p>
-</footer>
+</article>
+</main>
+<footer class="site-footer"><div class="inner">
+<p><a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html">Privacy Policy</a></p>
+<p>&copy; 2026 SimpleTrackers</p>
+</div></footer>
 </body>
 </html>
